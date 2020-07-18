@@ -1,0 +1,1 @@
+web: gunicorn finalone.wsgi --log-file -

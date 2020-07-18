@@ -1,0 +1,28 @@
+{% extends "mycollections/base.html" %}
+{% block content %}
+<div class="card">
+        <div class="card-header">
+            <h1><b>Invoice {{ object }}</b></h1>
+        </div>
+        <div class="card-body">
+        <table class="table table-bordered">
+                <tr>
+                    <td>Item Description </td>
+                    <td>Item Quantity</td>
+                    <td>Item Rate</td>
+                </tr>
+                {% for item in invoice_details.invoice.filter %}
+                <tr>
+                    <td>{{ item.item_description }}</td>
+                    <td>{{ item.item_quantity }}</td>
+                    <td>{{ item.item_rate }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+              
+        <a class="btn btn-outline-info" href="{% url 'mycollections:collection_update' pk=object.id %}">Update</a>
+        <a class="btn btn-outline-danger" href="{% url 'mycollections:collection_delete' pk=object.id %}">Delete</a>
+        </div>
+</div>
+
+{% endblock content %}

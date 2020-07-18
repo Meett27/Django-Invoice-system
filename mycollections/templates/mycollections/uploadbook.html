@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+
+
+  <h2>Upload book</h2>
+  <form method="post" enctype="multipart/form-data" action="{% url 'mycollections:upload' %}">
+    {% csrf_token %}
+      {% if uploaded_file %}
+          {{ uploaded_file }}
+      {% endif %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Upload book</button>
+  </form>
+
+

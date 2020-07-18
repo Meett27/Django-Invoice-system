@@ -1,0 +1,26 @@
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+<table class="table table-bordered">
+        <tr>
+            <td>Id </td>
+            <td>Agent Name</td>
+            <td>vendor Name</td>
+            <td>Date</td>
+            <td>Details</td>
+        </tr>
+        {% for invoice in invoices %}
+        <tr>
+            <td>{{ invoice.id }}</td>
+            <td>{{ invoice.created_by}} </td>
+             <td>{{ invoice.vendor_name }}</td>
+             <td>{{ invoice.invoice_date}}</td>
+            <td><a href="{% url 'mycollections:collection_detail' invoice.id%}"><p>Details</p></a></td>
+        </tr>
+        {% endfor %}
+</table>
+        
+{% comment %} 
+{% for invoice in invoices %}
+    <p>{{ invoice }}</p>
+    <a href="{% url 'mycollections:collection_detail' invoice.id %}">Detail</a>
+{% endfor %} {% endcomment %}
