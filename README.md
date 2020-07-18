@@ -83,8 +83,8 @@ super user(user_name:meet,password:meet)
 3) How many agents can handle system at a time.
 
 ```
-If we are using the conventional cloud hosted system without a load balancer and scaling system,
-the app might be slow as it is intensive CRUD oriented.
+Here we are using Heroku cloud platform without any configuration of load balancing and scaling for our application 
+it might be slow after some limit of how many users can handled by our network 
 
 Thus,every person can access the system and work with it easily.
 
