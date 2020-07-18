@@ -75,7 +75,8 @@ No one can access the application without user login/registered
 Every Path is secured with login user_id, without user_id it will not going to allow access
 
 For Manager can access application via link which will be send to the email address and can login with Super user user_name and password in login page
-And only manager can update and delete the transactions in collections
+And only manager can update and delete the transactions in collections 
+super user(user_name:meet,password:meet)
 
 ```
 
